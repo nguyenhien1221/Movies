@@ -1,0 +1,25 @@
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin default_btn($color, $background, $hover_color) {
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: $color;
+    background-color: $background;
+    padding: 7px 17px;
+    transition: 0.3s;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $hover_color;
+    }
+}
+
+@mixin default_input {
+    outline: none;
+    color: $black_text_color;
+}

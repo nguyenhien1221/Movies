@@ -25,10 +25,123 @@ ol {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
-.main {
-  background-color: beige;
+.wrapper {
+  max-width: 100%;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/d496a7b3-9b8c-4782-9399-2384ea121f85/VN-vi-20221017-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper .inner {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0, transparent 60%, rgba(0, 0, 0, 0.8));
+  max-width: 100%;
+  height: 100vh;
+}
+
+.header-wrapper {
+  height: 6.5rem;
+  padding: 20px 45px 0px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  max-width: 100%;
+}
+.header-inner-control button {
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  padding: 7px 17px;
+  transition: 0.3s;
+}
+.header-inner-control button:hover {
+  cursor: pointer;
+  background-color: #be0711;
+}
+.header-inner-control button a {
+  color: white;
+}
+.header-inner-control .pri-btn {
+  margin-right: 30px;
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 65px 0px;
+}
+
+.hero-inner {
+  max-width: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.hero-inner .hero-title {
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 650px;
+}
+.hero-inner .hero-title-pri {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.hero-inner .hero-title-second {
+  color: white;
+  margin-top: 15px;
+  font-size: 1.6rem;
+}
+.hero-inner .hero-contact-title {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+.hero-inner .hero-contact-input input {
+  outline: none;
+  color: black;
+  min-width: 450px;
+  min-height: 60px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.hero-inner .hero-contact-input button {
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  padding: 7px 17px;
+  transition: 0.3s;
+  min-height: 60px;
+  padding: 0px 26px;
+  font-size: 1.2rem;
+}
+.hero-inner .hero-contact-input button:hover {
+  cursor: pointer;
+  background-color: #be0711;
+}
+
+.header {
+  background-color: blue;
+  color: yellow;
 }
 
 /*# sourceMappingURL=style.css.map */
