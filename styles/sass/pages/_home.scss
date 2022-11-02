@@ -41,7 +41,7 @@
 .hero-wrapper{
   @include flex_center;
   width: 100%;
-  padding: 65px 0px;
+  padding: 20px 0px;
 }
 
 .hero-inner {
@@ -60,6 +60,7 @@
       color: $white_text_color;
       font-size: 3rem;
       font-weight: 600;
+      margin: unset;
     }
 
     &-second {

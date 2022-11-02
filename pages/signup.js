@@ -1,20 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
-import validEmail from 'utils/validemail/index';
 
-const home = () => {
-  const [email, setEmail] = useState();
+import { Input } from 'antd';
 
-  const getEmail = (e) => {
-    setEmail(e.target.value);
+const signup = () => {
+  const [data, setData] = useState();
+
+  const handleChange = (e) => {
+    setData({
+      ...data,
+      [e.target.name]: [e.target.value.trim()],
+    });
   };
 
-  const checkEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (validEmail(email)) {
-      window.alert('Đã gửi lời mời đến Email của bạn');
-    } else {
-    }
+    console.log(data);
   };
 
   return (
@@ -43,42 +44,48 @@ const home = () => {
                 </svg>
               </a>
             </div>
-
-            <div className="header-inner-control">
-              <button className="pri-btn">
-                <a href="/login">Đăng nhập</a>
-              </button>
-              <button>
-                <a href="/signup">Đăng ký</a>
-              </button>
-            </div>
           </div>
         </div>
 
-        <div className="hero-wrapper">
-          <div className="hero-inner">
-            <div className="hero-title">
-              <p className="hero-title-pri">Chương trình truyền hình,</p>
-              <p className="hero-title-pri">phim không giới hạn và nhiều nội dung khác.</p>
-              <p className="hero-title-second">Xem ở mọi nơi. Hủy bất cứ lúc nào.</p>
-            </div>
+        <div className="signupform-wrapper">
+          <div className="signupform-inner">
+            <p className="signupform-inner-title">Đăng ký</p>
+            <form className="signupform-inner-form" onSubmit={(e) => handleSubmit(e)}>
+              <p className="signupform-inner-form-label">Tên đăng nhập</p>
+              <Input
+                name="username"
+                type="text"
+                className="signupform-inner-form-input"
+                placeholder="Tên đăng nhập..."
+                required
+                onChange={(e) => handleChange(e)}
+              />
+              <p className="signupform-inner-form-label">Mật khẩu</p>
+              <Input.Password
+                name="password"
+                className="signupform-inner-form-input"
+                type="password"
+                placeholder="Mật khẩu..."
+                required
+                onChange={(e) => handleChange(e)}
+              />
+              <p className="signupform-inner-form-label">Nhập lại mật khẩu</p>
+              <Input.Password
+                name="re_password"
+                className="signupform-inner-form-input"
+                type="password"
+                placeholder="Mật lại khẩu..."
+                required
+                onChange={(e) => handleChange(e)}
+              />
+              <button className="signupform-inner-form-submit">Đăng nhập</button>
+            </form>
 
-            <div className="hero-contact">
-              <div className="hero-contact-title">
-                <p>
-                  Bạn đã sẵn sàng chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của
-                  bạn
-                </p>
-              </div>
-              <form className="hero-contact-input" onSubmit={(e) => checkEmail(e)}>
-                <input
-                  type="email"
-                  value={email || ''}
-                  placeholder="Địa chỉ email..."
-                  onChange={(e) => getEmail(e)}
-                ></input>
-                <button className="hero-contact-input-btn">Bắt đầu &gt; </button>
-              </form>
+            <div className="signupform-inner-signup">
+              <p className="signupform-inner-signup-title">Bạn đã có tài khoản?</p>
+              <a className="signupform-inner-signup-link" href="/login">
+                Đăng nhập
+              </a>
             </div>
           </div>
         </div>
@@ -87,4 +94,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default signup;

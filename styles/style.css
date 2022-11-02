@@ -80,7 +80,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 65px 0px;
+  padding: 20px 0px;
 }
 
 .hero-inner {
@@ -103,6 +103,7 @@ a {
   color: white;
   font-size: 3rem;
   font-weight: 600;
+  margin: unset;
 }
 .hero-inner .hero-title-second {
   color: white;
@@ -139,9 +140,148 @@ a {
   background-color: #be0711;
 }
 
-.header {
-  background-color: blue;
-  color: yellow;
+.loginform-wrapper {
+  width: 450px;
+  height: 500px;
+  margin: auto;
+  padding: 35px 68px 40px;
+  background-color: #000000;
+  border-radius: 3px;
+}
+
+.loginform-inner {
+  border-radius: 3px;
+  height: 370px;
+  width: 314px;
+}
+.loginform-inner-title {
+  font-size: 2.2rem;
+  margin-bottom: 28px;
+  font-weight: 500;
+  color: white;
+}
+.loginform-inner-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.loginform-inner-form-label {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.loginform-inner-form-input {
+  outline: none;
+  color: black;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.loginform-inner-form-submit {
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  padding: 7px 17px;
+  transition: 0.3s;
+  min-width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  font-size: 1rem;
+}
+.loginform-inner-form-submit:hover {
+  cursor: pointer;
+  background-color: #be0711;
+}
+.loginform-inner-signup {
+  display: flex;
+  color: white;
+  margin-top: 20px;
+}
+.loginform-inner-signup-title {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+.loginform-inner-signup-link {
+  color: #e50914;
+  font-size: 1rem;
+}
+
+.signupform-wrapper {
+  width: 450px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 5px 68px 20px;
+  background-color: #000000;
+  border-radius: 3px;
+}
+
+.signupform-inner {
+  border-radius: 3px;
+  height: 370px;
+  width: 314px;
+}
+.signupform-inner-title {
+  font-size: 2rem;
+  margin-bottom: 28px;
+  font-weight: 500;
+  color: white;
+}
+.signupform-inner-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.signupform-inner-form-label {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.signupform-inner-form-input {
+  outline: none;
+  color: black;
+  padding: 5px 20px;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.signupform-inner-form-submit {
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  padding: 7px 17px;
+  transition: 0.3s;
+  min-width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  font-size: 1rem;
+}
+.signupform-inner-form-submit:hover {
+  cursor: pointer;
+  background-color: #be0711;
+}
+.signupform-inner-signup {
+  display: flex;
+  color: white;
+  margin-top: 20px;
+}
+.signupform-inner-signup-title {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+.signupform-inner-signup-link {
+  color: #e50914;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

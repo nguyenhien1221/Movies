@@ -1,6 +1,8 @@
-@import 'variable';
-@import 'mixin';
-@import 'base';
+@import 'setup/variable';
+@import 'setup/mixin';
+@import 'setup/base';
 
-@import 'home';
-@import '../../components/header/header';
+@import 'pages/home';
+@import 'pages/login';
+@import 'pages/signup';
+
