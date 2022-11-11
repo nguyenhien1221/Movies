@@ -1,96 +1,49 @@
-.wrapper {
-  max-width: 100%;
-    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/d496a7b3-9b8c-4782-9399-2384ea121f85/VN-vi-20221017-popsignuptwoweeks-perspective_alpha_website_small.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    
-    .inner {
-        background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
-        max-width: 100%;
-        height: 100vh;
-    }
-}
+.home_inner {
+  &_hero {
+    &_poster {
+      max-width: 100%;
+      height: 600px;
+      &_img {
+        filter: brightness(0.7);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
 
-.header-wrapper {
-  height: 6.5rem;
-  padding: 20px 45px 0px;
-}
-
-.header-inner {
-  @include flex_center;
-  justify-content: space-between;
-  height: 45px;
-  max-width: 100%;
-
-  &-control {
-    button {
-        @include default_btn($white_text_color, $red_background, $btn_hover_background);
-      a {
+      &_info {
+        max-width: 700px;
+        position: relative;
         color: $white_text_color;
+        font-size: 2.3rem;
+        font-weight: 700;
+        top: 220px;
+        left: 45px;
+
+        & .title {
+          margin-bottom: 10px;
+        }
+
+        & .description {
+          font-weight: 500;
+          max-width: 400px;
+          height: 100px;
+          font-size: 1.1rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        & .control {
+            margin-top: 12px;
+
+            & button {
+                @include default_btn($white_text_color, $red_background, $btn_hover_background);
+                font-size: 1.2rem;
+                padding: 5px 35px;
+                font-weight: 400;
+            }
+        }
       }
     }
-
-    .pri-btn {
-      margin-right: 30px;
-    }
   }
 }
-
-.hero-wrapper{
-  @include flex_center;
-  width: 100%;
-  padding: 20px 0px;
-}
-
-.hero-inner {
-  max-width: 950px;
-  @include flex_center;
-  flex-direction: column;
-  text-align: center;
-
-  .hero-title {
-    margin-bottom: 35px;
-    @include flex_center;
-    flex-direction: column; 
-    max-width: 650px;
-
-    &-pri{
-      color: $white_text_color;
-      font-size: 3rem;
-      font-weight: 600;
-      margin: unset;
-    }
-
-    &-second {
-      color: $white_text_color;
-      margin-top: 15px ;
-      font-size: 1.6rem;
-    }
-  }
-
-  .hero-contact {
-    &-title{
-      color: $white_text_color;
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-    }
-
-    &-input input {
-      @include default_input;
-      min-width: 450px;
-      min-height: 60px;
-      padding: 10px;
-      font-size: 1.2rem;
-    }
-
-    &-input button {
-      @include default_btn($white_text_color, $red_background, $btn_hover_background);
-      min-height: 60px;
-      padding: 0px 26px;
-      font-size: 1.2rem;
-    }
-  }
-}
-

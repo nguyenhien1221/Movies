@@ -36,8 +36,10 @@ a {
   height: 60px;
   max-width: 100%;
   padding: 0 45px 0px;
-  background-color: rgba(0, 0, 0, 0.8);
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 100%);
+  z-index: 9;
+  position: fixed;
+  top: 0;
 }
 
 .main_header-inner {
@@ -126,6 +128,74 @@ a {
 .main_header-inner_right_user img {
   object-fit: cover;
   width: 100%;
+}
+
+.movieitem_wrapper {
+  width: 200px;
+  height: 300px;
+}
+
+.movieitem_inner {
+  min-width: 200px;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.movieitem_inner img {
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  filter: brightness(0.7);
+}
+.movieitem_inner_info {
+  max-width: 190px;
+  position: relative;
+  padding: 140px 0 0 20px;
+}
+.movieitem_inner_info .title p {
+  max-width: 150px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.movieitem_inner_info .rate {
+  font-size: 0.8rem;
+  color: white;
+}
+.movieitem_inner_info .control {
+  font-size: 2.5rem;
+  color: white;
+  transition: 0.3s;
+}
+.movieitem_inner_info .control:hover {
+  color: #e50914;
+}
+.movieitem_inner:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgb(110, 110, 110);
+}
+
+.toprate_wrapper {
+  width: 100%;
+  padding: 30px 10px 10px;
+  background-color: black;
+}
+.toprate_wrapper_title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: unset;
+  color: white;
+}
+.toprate_wrapper_movies {
+  max-width: 100%;
+  padding: 20px;
 }
 
 .wrapper {
@@ -382,6 +452,57 @@ a {
 .signupform-inner-signup-link {
   color: #e50914;
   font-size: 1rem;
+}
+
+.home_inner_hero_poster {
+  max-width: 100%;
+  height: 600px;
+}
+.home_inner_hero_poster_img {
+  filter: brightness(0.7);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.home_inner_hero_poster_info {
+  max-width: 700px;
+  position: relative;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 700;
+  top: 220px;
+  left: 45px;
+}
+.home_inner_hero_poster_info .title {
+  margin-bottom: 10px;
+}
+.home_inner_hero_poster_info .description {
+  font-weight: 500;
+  max-width: 400px;
+  height: 100px;
+  font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home_inner_hero_poster_info .control {
+  margin-top: 12px;
+}
+.home_inner_hero_poster_info .control button {
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  padding: 7px 17px;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  padding: 5px 35px;
+  font-weight: 400;
+}
+.home_inner_hero_poster_info .control button:hover {
+  cursor: pointer;
+  background-color: #be0711;
 }
 
 /*# sourceMappingURL=style.css.map */

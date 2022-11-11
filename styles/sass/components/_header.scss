@@ -4,8 +4,12 @@
   height: 60px;
   max-width: 100%;
   padding: 0 45px 0px;
-  background-color: rgba(0, 0, 0, 0.8);
+  // background-color: rgba(0, 0, 0, 0.8);
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 100%);
+
+  z-index: 9;
+  position: fixed;
+  top: 0;
 }
 
 .main_header-inner {
