@@ -16,13 +16,15 @@ const TopRate = ({ topMovies }) => {
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
+    arrows: false,
+    centerMode: true
   };
 
   return (
     <div className="toprate_wrapper">
       <p className='toprate_wrapper_title'>Top Rate</p>
       <div className="toprate_wrapper_movies">
-        <Slider className='slider'{...settings}>
+        <Slider className='slider'{...settings} >
             {movies.map((item) => (
               <ListMovieItem movie={item} key={item.id} />
             ))}

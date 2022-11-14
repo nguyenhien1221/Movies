@@ -1,0 +1,53 @@
+.comingitem_wrapper {
+    width: 1000px;
+    height: 300px;
+  }
+  
+  .comingitem_inner {
+      min-width: 1000px;
+      min-height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: .3s;
+  
+    & img {
+      border-radius: 10px;
+      width: 1000px;
+      height: 300px;
+      object-fit: cover;
+      position: absolute;
+      filter: brightness(0.7);
+    }
+  
+    &_info {
+      max-width: 400px;
+      position: relative;
+      padding: 120px 0 0 20px;
+  
+      & .title p {
+        max-width: 400px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $white_text_color;
+        margin-bottom: 5px;
+      }
+
+      & .description p {
+        font-size: 1rem;
+        color: $white_text_color;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 5px rgb(110, 110, 110);
+    }
+  }
+
+  .active {
+    color: $red_background;
+  }
+  

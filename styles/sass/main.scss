@@ -5,9 +5,14 @@
 @import 'components/header';
 @import 'components/Home/ListMovieItem.scss';
 @import 'components/Home/TopRate.scss';
+@import 'components/Home/UpComing/UpComingItem.scss';
+@import 'components/Home/UpComing/UpComingList.scss';
+@import 'components/TVShows/TopRate/TopRateItem.scss';
+@import 'components/TVShows/TopRate/TopRateList.scss';
 
 @import 'pages/landing';
 @import 'pages/login';
 @import 'pages/signup';
 @import 'pages/home';
+@import 'pages/tvshows';
 

@@ -4,10 +4,11 @@ import { useEffect, useState } from 'react';
 import Header from 'components/Header';
 import requests from 'utils/API';
 import TopRate from 'components/Home/TopRate';
+import UpComingList from 'components/Home/UpComing/UpComingList';
 
 import { CaretRightOutlined } from '@ant-design/icons';
 
-const home = ({ popularMovies, topMovies }) => {
+const home = ({ popularMovies, topMovies, TVShows }) => {
   const [movie, setMovie] = useState({});
   
   // get random movie
@@ -16,7 +17,6 @@ const home = ({ popularMovies, topMovies }) => {
     const singleMovie = movies[Math.floor(Math.random() * movies.length)];
     setMovie(singleMovie);
   },[]);
-
 
   return (
     <div className="home_wrapper">
@@ -44,6 +44,9 @@ const home = ({ popularMovies, topMovies }) => {
           <div className='home_inner_hero_toprate'>
             <TopRate topMovies= {topMovies}/>
           </div>
+          <div className='home_inner_hero_upcoming'>
+            <UpComingList upComingMovie={TVShows}/>
+          </div>
         </div>
       </div>
     </div>
@@ -53,12 +56,14 @@ const home = ({ popularMovies, topMovies }) => {
 export const getServerSideProps = async () => {
   const popularResponse = await fetch(requests.requestTrending);
   const topRes = await fetch(requests.requestPopular);
+  const TVShowsRes = await fetch(requests.requestPopularTVShow);
   
+  const TVShows= await TVShowsRes.json();
   const topMovies = await topRes.json();
   const popularMovies = await popularResponse.json();
 
   return {
-    props: { popularMovies, topMovies },
+    props: { popularMovies, topMovies, TVShows},
   };
 };
 

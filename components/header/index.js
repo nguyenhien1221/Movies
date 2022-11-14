@@ -1,7 +1,9 @@
 import React from 'react';
 import { SearchOutlined, BellFilled } from '@ant-design/icons';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="main_header-wrapper">
       <div className="main_header-inner">
@@ -31,13 +33,28 @@ const Header = () => {
           <div className="main_header-inner_left_nav">
             <ul className="list">
               <li className="list_item">
-                <a href="/home">Home</a>
+                <a
+                  className={`list_item_${router.pathname == '/home' ? 'active' : 'noactive'}`}
+                  href="/home"
+                >
+                  Home
+                </a>
               </li>
               <li className="list_item">
-                <a href="/home">TV Shows</a>
+                <a
+                  className={`list_item_${router.pathname == '/tvshows' ? 'active' : 'noactive'}`}
+                  href="/tvshows"
+                >
+                  TV Shows
+                </a>
               </li>
               <li className="list_item">
-                <a href="/home">Movies</a>
+                <a
+                  className={`list_item_${router.pathname == '/movies' ? 'active' : 'noactive'}`}
+                  href="/movies"
+                >
+                  Movies
+                </a>
               </li>
             </ul>
           </div>

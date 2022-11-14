@@ -1,3 +1,5 @@
+
+
 .main_header-wrapper {
   @include flex_center;
   justify-content: unset;
@@ -34,12 +36,20 @@
       &_item {
         margin-right: 20px;
 
-        & a {
+        &_noactive {
           font-size: 1.1rem;
           display: block;
           color: $white_text_color;
           line-height: 60px;
-          transition: .3s;
+          transition: 0.3s;
+        }
+
+        &_active {
+          font-size: 1.1rem;
+          display: block;
+          line-height: 60px;
+          transition: 0.3s;
+          color: $red_background;
         }
 
         &:hover a {
