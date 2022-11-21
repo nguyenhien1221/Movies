@@ -1,20 +1,29 @@
 import React from 'react';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { Input } from 'antd';
 
 const login = () => {
+  const username = 'admin';
+  const password = 'admin'
+
+  const router = useRouter();
   const [data, setData] = useState();
 
   const handleChange = (e) => {
     setData({
       ...data,
-      [e.target.name]: [e.target.value.trim()],
+      [e.target.name]: e.target.value.trim(),
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data);
+    if (data.username === username && data.password === password) {
+      router.push('/home');
+    } else {
+      alert("wrong infomation")
+    }
   };
 
   return (
