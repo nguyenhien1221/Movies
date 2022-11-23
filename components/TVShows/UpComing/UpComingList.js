@@ -20,7 +20,7 @@ const UpComingList = ({ upComingTV }) => {
 
   return (
     <div className="upcoming_wrapper">
-      <p className="upcoming_wrapper_title">Up Coming</p>
+      <p className="upcoming_wrapper_title">Popular TVShows</p>
       <div className="upcoming_wrapper_movies">
         <Slider {...settings}>
           {movies.map((item) => (

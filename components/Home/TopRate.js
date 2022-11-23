@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-const TopRate = ({ topMovies }) => {
+const TopRate = ({ topMovies}) => {
   const movies = topMovies.results;
 
   //settign for slider
@@ -26,7 +26,7 @@ const TopRate = ({ topMovies }) => {
       <div className="toprate_wrapper_movies">
         <Slider className='slider'{...settings} >
             {movies.map((item) => (
-              <ListMovieItem movie={item} key={item.id} />
+              <ListMovieItem movie={item} key={item.id}/>
             ))}
         </Slider>
       </div>
