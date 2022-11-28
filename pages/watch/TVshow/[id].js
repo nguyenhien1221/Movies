@@ -1,30 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import requests from 'utils/API';
-import { getApi } from 'utils/fetchAPI';
 
 const id = ({ TVDetails }) => {
-  useEffect(() => {
-    async function getApi() {
-      const res = fetch(requests.requestTrending);
-      const res2 = fetch(requests.requestTopRated);
-
-      const urls = [res, res2];
-
-      Promise.all(
-        urls.map((item) => {
-          return item.then((res) => res.json());
-        })
-      ).then((res) => {
-        const listMovie = res.map((item) => item.results).flat();
-        return listMovie;
-      });
-    }
-
-    getApi();
-  });
 
   return (
     <>

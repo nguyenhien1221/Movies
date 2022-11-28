@@ -1,15 +1,17 @@
 import React from 'react';
-import { SearchOutlined, BellFilled } from '@ant-design/icons';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+
+import { SearchOutlined, BellFilled } from '@ant-design/icons';
 
 const Header = () => {
   const router = useRouter();
   return (
-    <div className="main_header-wrapper">
+    <div className ='main_header-wrapper' >
       <div className="main_header-inner">
         <div className="main_header-inner_left">
           <div className="main_header-inner_left_logo">
-            <a href="/">
+            <Link href="/home">
               <svg
                 viewBox="0 0 111 30"
                 data-uia="netflix-logo"
@@ -27,34 +29,34 @@ const Header = () => {
                   ></path>
                 </g>
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="main_header-inner_left_nav">
             <ul className="list">
               <li className="list_item">
-                <a
+                <Link
                   className={`list_item_${router.pathname == '/home' ? 'active' : 'noactive'}`}
                   href="/home"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="list_item">
-                <a
+                <Link
                   className={`list_item_${router.pathname == '/tvshows' ? 'active' : 'noactive'}`}
                   href="/tvshows"
                 >
                   TV Shows
-                </a>
+                </Link>
               </li>
               <li className="list_item">
-                <a
+                <Link
                   className={`list_item_${router.pathname == '/movies' ? 'active' : 'noactive'}`}
                   href="/movies"
                 >
                   Movies
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -69,12 +71,12 @@ const Header = () => {
           </div>
 
           <div className="main_header-inner_right_user">
-            <a href="/home">
+            <Link href="/home">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                 alt="avatar"
               ></img>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

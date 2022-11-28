@@ -5,7 +5,7 @@ import { Input } from 'antd';
 
 const login = () => {
   const username = 'admin';
-  const password = 'admin'
+  const password = 'admin';
 
   const router = useRouter();
   const [data, setData] = useState();

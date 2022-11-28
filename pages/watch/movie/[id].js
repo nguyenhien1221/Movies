@@ -6,26 +6,6 @@ import requests from 'utils/API';
 import { getApi } from 'utils/fetchAPI';
 
 const id = ({ movieDetails }) => {
-  
-  useEffect(() => {
-    async function getApi() {
-      const res = fetch(requests.requestTrending);
-      const res2 = fetch(requests.requestTopRated);
-
-      const urls = [res, res2];
-
-      Promise.all(
-        urls.map((item) => {
-          return item.then((res) => res.json());
-        })
-      ).then((res) => {
-        const listMovie = res.map((item) => item.results).flat();
-        return listMovie;
-      });
-    }
-
-    getApi();
-  });
 
   return (
     <>
@@ -44,7 +24,7 @@ export const getStaticPaths = async () => {
     .then((r) => r.json())
     .then((r) => r.results);
 
-  const topMovie = await fetch(requests.requestTopRated)
+  const topMovie = await fetch(requests.requestPopular)
     .then((r) => r.json())
     .then((r) => r.results);
 

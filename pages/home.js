@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
-import Header from 'components/Header';
 import requests from 'utils/API';
 import TopRate from 'components/Home/TopRate';
 import UpComingList from 'components/Home/UpComing/UpComingList';
@@ -32,7 +31,6 @@ const home = ({ popularMovies, topMovies, TVShows }) => {
         <title>Home</title>
       </Head>
       <div className="home_wrapper">
-        <Header />
         <div className="home_inner">
           <div className="home_inner_hero">
             <div className="home_inner_hero_poster">
@@ -47,7 +45,7 @@ const home = ({ popularMovies, topMovies, TVShows }) => {
                 <div className="control">
                   <button onClick={() => onPushRouter(movie.id)}>
                     <CaretRightOutlined />
-                    Play
+                    Watch
                   </button>
                 </div>
               </div>

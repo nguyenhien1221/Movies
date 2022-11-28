@@ -1,10 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 import { PlayCircleOutlined } from '@ant-design/icons';
 
 const TopRateItem = ({ movie }) => {
   return (
     <div className="TVStoprate_wrapper">
-      <a href={`watch/TVshow/${movie.id}`}>
+      <Link href={`watch/TVshow/${movie.id}`}>
         <div className="TVStoprate_inner">
           <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
 
@@ -18,7 +19,7 @@ const TopRateItem = ({ movie }) => {
             <PlayCircleOutlined className="control" />
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

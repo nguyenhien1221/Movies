@@ -1,9 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 
 const UpComingItem = ({ movie }) => {
   return (
     <div className="comingitem_wrapper">
-      <a href={`watch/TVshow/${movie.id}`}>
+      <Link href={`watch/TVshow/${movie.id}`}>
         <div className="comingitem_inner">
           <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
 
@@ -16,7 +17,7 @@ const UpComingItem = ({ movie }) => {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

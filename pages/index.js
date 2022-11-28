@@ -23,7 +23,7 @@ const home = () => {
         <div className="header-wrapper">
           <div className="header-inner">
             <div className="header-inner-logo">
-              <a href="/">
+              <a href="/home">
                 <svg
                   viewBox="0 0 111 30"
                   data-uia="netflix-logo"
