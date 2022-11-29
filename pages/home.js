@@ -12,12 +12,13 @@ import { CaretRightOutlined } from '@ant-design/icons';
 const home = ({ popularMovies, topMovies, TVShows }) => {
   const router = useRouter();
   const [movie, setMovie] = useState({});
-  const [movieID, setMovieID] = useState();
 
   // get random movie
   useEffect(() => {
     const movies = popularMovies.results;
-    const singleMovie = movies[Math.floor(Math.random() * movies.length)];
+    const listMovie = [...movies]
+    
+    const singleMovie = listMovie[Math.floor(Math.random() * movies.length)];
     setMovie(singleMovie);
   }, []);
 
