@@ -5,6 +5,8 @@ import Head from 'next/head';
 import requests from 'utils/API';
 import TopRateList from 'components/TVShows/TopRate/TopRateList';
 import UpComingList from 'components/TVShows/UpComing/UpComingList';
+import { getApi } from 'utils/fetchAPI';
+
 import { CaretRightOutlined } from '@ant-design/icons';
 
 const TVShows = ({ lateTV, topRateTV, popularTV }) => {
@@ -62,13 +64,10 @@ const TVShows = ({ lateTV, topRateTV, popularTV }) => {
 };
 
 export const getServerSideProps = async () => {
-  const lateResponse = await fetch(requests.requestLatestTVShow);
-  const topRateResponse = await fetch(requests.requestTopRateTVShow);
-  const popularRespone = await fetch(requests.requestPopularTVShow);
 
-  const topRateTV = await topRateResponse.json();
-  const lateTV = await lateResponse.json();
-  const popularTV = await popularRespone.json();
+  const topRateTV = await getApi(requests.requestTopRateTVShow);
+  const lateTV = await getApi(requests.requestLatestTVShow);
+  const popularTV = await getApi(requests.requestPopularTVShow);
 
   return {
     props: { lateTV, topRateTV, popularTV },

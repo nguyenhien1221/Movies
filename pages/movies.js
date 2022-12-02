@@ -6,6 +6,7 @@ import Head from 'next/head';
 import requests from 'utils/API';
 // import TopRate from 'components/Home/TopRate';
 // import UpComingList from 'components/Home/UpComing/UpComingList';
+import { getApi } from 'utils/fetchAPI';
 
 import { CaretRightOutlined } from '@ant-design/icons';
 
@@ -64,13 +65,10 @@ const home = ({ popularMovies, topMovies, TVShows }) => {
 };
 
 export const getStaticProps = async () => {
-  const popularResponse = await fetch(requests.requestTrending);
-  const topRes = await fetch(requests.requestPopular);
-  const TVShowsRes = await fetch(requests.requestPopularTVShow);
 
-  const TVShows = await TVShowsRes.json();
-  const topMovies = await topRes.json();
-  const popularMovies = await popularResponse.json();
+  const TVShows = await getApi(requests.requestPopularTVShow);
+  const topMovies = await getApi(requests.requestPopular);
+  const popularMovies = await getApi(requests.requestTrending); 
 
   return {
     props: { popularMovies, topMovies, TVShows },
